@@ -16,17 +16,29 @@
 </style>
 </head>
 <body>
-<h1>Hello Akshay!</h1>
+	<div class="header">
+	
+<h1>Welcome to Real Time Damage Location System :)</h1>
+<img class="logo" src="logo2.png" width="160px" height="90px" style="float: left;">
+		</div>
+		<div class="bor"></div>
+<div style="display: none;" >
   <br><br>
    <p>Status :</p> <input id="status" type="text" > <br><br>
    <p>X-co-ordinate :</p> <input id="x-pt" type="text" > <br><br>
    <p>Y-co-ordinate :</p> <input id="y-pt" type="text" > <br><br>
   
    <button id="insert">Insert</button>
-  
+</div>
+<br><br>
+<h2>Plate is <span id="sta"></span> !</h2>
+<br><br>
+<div id="loc">
+<h2>Damage Co-ordinates: (23,44)</h2>
+</div>
    <script type="text/javascript">
        
-
+	   document.getElementById("sta").innerHTML = "damaged"; 
         var Status, X, Y;
         function get(){
           Status = document.getElementById("status").value;
@@ -47,7 +59,10 @@
           Y: Y
           
 });
-        }
+		}
+		
+		
+
   </script>
 </body>
 </html>
