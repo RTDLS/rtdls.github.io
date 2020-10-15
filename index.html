@@ -17,5 +17,37 @@
 </head>
 <body>
 <h1>Hello Akshay!</h1>
+  <br><br>
+   <p>Status :</p> <input id="status" type="text" > <br><br>
+   <p>X-co-ordinate :</p> <input id="x-pt" type="text" > <br><br>
+   <p>Y-co-ordinate :</p> <input id="y-pt" type="text" > <br><br>
+  
+   <button id="insert">Insert</button>
+  
+   <script type="text/javascript">
+       
+
+        var Status, X, Y;
+        function get(){
+          Status = document.getElementById("status").value;
+          X = document.getElementById("x-pt").value;
+          Y = document.getElementById("y-pt").value;
+    
+
+        }
+
+        document.getElementById("insert").onclick = function(){
+
+          get();
+         
+          firebase.database().ref('data').set({
+
+          Status: Status,
+          X: X,
+          Y: Y
+          
+});
+        }
+  </script>
 </body>
 </html>
