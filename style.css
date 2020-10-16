@@ -32,8 +32,9 @@ body {
 .content{
 	
 	margin: auto;
-	width: 60%;
-	text-align: left;
+	width: 70%;
+	text-align: center;
+	color: blue;
 	padding: 15px;
 	border: 5px solid rgb(255, 226, 61);
 	border-radius: 5px;
