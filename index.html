@@ -15,13 +15,17 @@
 
 </style>
 </head>
-<body>
+<body onload="initial()">
 	<div class="header">
 	
 <h1>Welcome to Real Time Damage Location System :)</h1>
-<img class="logo" src="logo2.png" width="160px" height="90px">
-		</div>
-		<div class="bor"></div>
+<img class="logo" src="logo.png" width="160px" height="90px">
+    </div>
+ <div class="center">
+    <button class="tablink" onclick="monitor()" id="defaultOpen">Monitor</button>
+    <button class="tablink" onclick="lamb()">Lamb Waves</button>
+    <button class="tablink" onclick="about()">About</button>
+  </div>
 <div style="display: none;" >
   <br><br>
    <p>Status :</p> <input id="status" type="text" > <br><br>
@@ -31,17 +35,83 @@
    <button id="insert">Insert</button>
 </div>
 <br><br>
-<div class="content">
-	<h2>Plate is <span id="sta"></span> !</h2>
+<div class="content-monitor" id="cm">
+	<h2>Status of plate : <span id="sta"></span></h2>
 <br>
 <div id="loc">
-<h2>Damage Co-ordinates: (23,44)</h2>
+<h2>Location of damage: <span style="color: red;">(x,y) = (23,44)</span></h2>
 </div>
+
 </div>
+<div class="content-lamb" id="cl">
+  <h2>Lamb Waves:</h2>
+  <p>Lamb Waves are surface guided waves which travel in thin structure at long distance without attenuation. They travel in Radial in-plane motion i.e. Symmetric Mode and Out of plane motion i.e. Anti-symmetric Mode as shown in fig.(a) & fig.(b) respectively.</p>
+  
+  <figure>
+    <img src='symmetric.png' width="400" >
+    <figcaption>fig.(a) Symmetric Mode</figcaption>
+</figure>
+<figure>
+    <img src='anti_symmetric.png' width="400">
+    <figcaption>fig.(b) Anti-symmetric Mode</figcaption>
+</figure>
+<p>Their velocity depends on product of wave frequency and structure thickness. A wide range of Phase Velocity and Group Velocity are available as per mode shape of thin structure as shown in fig.(c) & fig.(d) respectively.</p>
+<figure>
+  <img src='pv.JPG' width="400" >
+  <figcaption>fig.(c) Phase Velocity</figcaption>
+</figure>
+<figure>
+  <img src='gv.JPG' width="400">
+  <figcaption>fig.(d) Group Velocity</figcaption>
+</figure>
+
+</div>
+
+<div class="content-about" id="ca">
+<h2>About</h2>
+<div class="center">
+<figure>
+  <img src='akshay.jpg' width="200" >
+  <figcaption><b>Akshay Kolekar</b></figcaption>
+  <br>
+  <figcaption>M.E. Student</figcaption>
+</figure>
+<figure>
+  <img src='nitesh.jpg' width="200" >
+  <figcaption><b>Nitesh Yelve</b></figcaption>
+  <br>
+  <figcaption>Guide</figcaption>
+</figure>
+</div>
+
+</div>
+
+<footer id="footer"> © Copyright 2020, All Rights Reserved</footer>
+<script>
+  function initial(){
+ monitor();
+  }
+  function monitor(){
+    document.getElementById('cm').style.display = "block";
+    document.getElementById('cl').style.display = "none";
+    document.getElementById('ca').style.display = "none";
+  }
+  function lamb(){
+    document.getElementById('cl').style.display = "block";
+    document.getElementById('cm').style.display = "none";
+    document.getElementById('ca').style.display = "none";
+    }
+    function about(){
+    document.getElementById('ca').style.display = "block";
+    document.getElementById('cm').style.display = "none";
+    document.getElementById('cl').style.display = "none";
+    }
+
+</script>
 
    <script type="text/javascript">
        
-	   document.getElementById("sta").innerHTML = "damaged"; 
+	   document.getElementById("sta").innerHTML = "Damaged"; 
         var Status, X, Y;
         function get(){
           Status = document.getElementById("status").value;
