@@ -39,7 +39,7 @@
 	<h2>Status of plate : <span id="sta"></span></h2>
 <br>
 <div id="loc">
-<h2>Location of damage: <span style="color: red;">(x,y) = (23,44)</span></h2>
+<h2 style="display:none;">Location of damage: <span style="color: red;">(x,y) = (23,44)</span></h2>
 </div>
 
 </div>
@@ -111,7 +111,7 @@
 
    <script type="text/javascript">
        
-	   document.getElementById("sta").innerHTML = "Damaged"; 
+	   document.getElementById("sta").innerHTML = "Intact"; 
         var Status, X, Y;
         function get(){
           Status = document.getElementById("status").value;
