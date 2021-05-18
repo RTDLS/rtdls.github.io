@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>RTDLS</title>
+
+      
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-database.js"></script>
+
+</head>
+<body onload="load()">
+    <div id="header">
+        <p>Username :</p> <input id="username" type="text" > <br><br>    <button id="insert">Insert</button>
+<button onclick="aaaa()">get</button>
+        <h1>RTDLS</h1>
+        <h3>Real Time Damage Location System</h3>
+    </div>
+    <div id="main">
+           
+        <div id="container">
+            <h1>Live Monitor</h1>
+            <div id="monitor">
+<div id="not"></div>
+<div id="status">
+    <p>Status of Plate:</p>
+    <br>
+    <span id="intact">Intact</span>
+    <span id="damage">Damaged</span>
+</div>
+
+<div id="cod">
+    <p>Co-ordinates of damage:</p>
+    <br>
+    <span id="co">(11,22)</span>
+</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script src="script.js"></script>
+<script src="firebase.js"></script>
+</html>
