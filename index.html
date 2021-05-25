@@ -1,47 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
+     <!-- Unicode and Initial-scale -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <!-- Title of Website -->
     <title>RTDLS</title>
-
-      
+    <!-- Inculding css file -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Inculding Firebase scripts -->
     <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-database.js"></script>
 
 </head>
 <body onload="load()">
-    <div id="header">
+    <!-- Header -->
+    <div id="header">    
         <h1>RTDLS</h1>
         <h3>Real Time Damage Location System</h3>
     </div>
-    <div id="main">
-           
-        <div id="container">
-            <h1>Live Monitor</h1>
-            <div id="monitor">
-<div id="not"></div>
-<div id="status">
-    <p>Status of Plate:</p>
-    <br>
-    <span id="intact">Intact</span>
-    <span id="damage">Damaged</span>
-</div>
 
-<div id="cod">
-    <p>Co-ordinates of damage:</p>
-    <br>
-    <span id="co">(11,22)</span>
-</div>
+    <div id="main">           
+        <div id="container">                                  <!-- Container -->
+            <h1>Live Monitor</h1>
+                <div id="monitor">
+                    <div id="not"></div>                      <!-- Nothing is performed -->
+                    <div id="status">                         <!-- Status of Plate -->
+                        <p>Status of Plate:</p>
+                        <br>
+                        <span id="intact">Intact</span>       <!-- Case1: Intact -->
+                        <span id="damage">Damaged</span>      <!-- Case2: Damaged -->
+                    </div>
+                    <div id="cod">                           
+                        <p>Co-ordinates of damage:</p>
+                        <br>
+                        <span id="co"></span>                 <!-- Co-ordinates of Damage -->
+                    </div>
             </div>
         </div>
     </div>
 
 </body>
 
+<!-- Inculding Some more scripts -->
 <script src="script.js"></script>
 <script src="firebase.js"></script>
 </html>
